@@ -1,6 +1,6 @@
-/* Header */
+
 header {
-    background-color: #189E1D;
+    background-color:rgba(79, 119, 45) ;
     padding: 2px 20px;
 }
 
@@ -8,7 +8,6 @@ header img {
     height: 40px;
 }
 
-/* Main Section */
 .about-me {
     background: url('img/colage.jpg') no-repeat center center/cover;
     padding: 100px 0;
@@ -19,26 +18,31 @@ header img {
     background-color: #FFF;
     padding: 50px;
     border-radius: 26px;
-    width: 40%;
+    width: 43%;
     max-width: 600px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
 }
- 
- main .box-button {
+
+.box-button {
     width: 9em;
     height: 3em;
     border-radius: 30em;
     font-size: 15px;
     font-family: inherit;
     border: none;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
     position: relative;
-    overflow: hidden;
     z-index: 1;
-    box-shadow: 6px 6px 12px #c5c5c5,
-                -6px -6px 12px #d9d9d9;
-   }
-   
-  main  .box-button::before {
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #d9d9d9;
+}
+
+.box-button::before {
     content: '';
     width: 0;
     height: 3em;
@@ -50,14 +54,14 @@ header img {
     transition: .5s ease;
     display: block;
     z-index: -1;
-   }
-   
- main  .box-button:hover::before {
-    width: 9em;
-   }
+}
 
-/* About Section */
-/* For-Me Section */
+.box-button:hover::before {
+    width: 9em;
+}
+
+
+
 .for-me .container {
     display: flex;
     align-items: center;
@@ -81,7 +85,6 @@ header img {
 }
 
 
-/* From Uiverse.io by cssbuttons-io */ 
 .learn-more {
     position: relative;
     display: inline-block;
