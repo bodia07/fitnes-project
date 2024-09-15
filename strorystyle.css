@@ -20,6 +20,18 @@ main img{
 .image-content{
     text-align: center;
 }
+.txt-foto{
+    text-align: center;
+}
+
+.txt-foto img{
+    height: 500px;
+    width: 500px;
+    border-radius: 0;
+}
+main{
+    padding: 10px;
+}
 
 
 
