@@ -1,38 +1,56 @@
-
 header {
-    background-color:#C7D5B4 ;
-    padding: 2px 20px;
+    background-color: #C7D5B4;
+    padding: 10px 20px;
 }
 
 header img {
     height: 40px;
 }
 
-body{
-    background-color: #faf5ef
+body {
+    background-color: #faf5ef;
+    font-family: 'Oswald', sans-serif;
+    color: #333;
+    line-height: 1.6;
 }
-main img{
+
+main {
+    padding: 20px;
+}
+
+h1, h4 {
+    font-weight: 700;
+    color: #2f2f2f;
+}
+
+p {
+    font-size: 18px;
+    margin: 15px 0;
+    text-align: justify;
+}
+
+.image-content {
+    text-align: center;
+}
+
+.image-content img {
     width: 300px;
     height: 200px;
-    border-radius: 360px;
-    
-}
-.image-content{
-    text-align: center;
-}
-.txt-foto{
-    text-align: center;
+    border-radius: 50%;
 }
 
-.txt-foto img{
-    height: 500px;
+.txt-foto img {
     width: 500px;
-    border-radius: 0;
-}
-main{
-    padding: 10px;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: end;
 }
 
+.last-part {
+    padding: 20px;
+
+}
 
 
 .box-button {
@@ -43,8 +61,8 @@ main{
     font-family: inherit;
     border: none;
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     position: relative;
     z-index: 1;
     box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #d9d9d9;
@@ -66,4 +84,29 @@ main{
 
 .box-button:hover::before {
     width: 9em;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.text-content {
+    flex: 1;
+    text-align: center;
+    padding-right: 20px; /* Space between text and image */
+}
+
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Image aligned to the right */
+}
+
+.image-content img {
+    width: 600px; /* Adapt image size */
+    height: 600px;
+    border-radius: 10px;
 }
