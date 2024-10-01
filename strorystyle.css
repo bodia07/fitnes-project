@@ -1,3 +1,4 @@
+
 header {
     background-color: #C7D5B4;
     padding: 10px 20px;
@@ -6,6 +7,7 @@ header {
 header img {
     height: 40px;
 }
+
 
 body {
     background-color: #faf5ef;
@@ -19,13 +21,6 @@ main {
     padding-right: 30px;
 }
 
-education-10 {
-    width: 100px;
-}
-
-.Education-img {
-    text-align: center;
-}
 
 h1,
 h4 {
@@ -37,8 +32,9 @@ h4 {
 p {
     font-size: 18px;
     margin: 15px 0;
-    text-align: center;
+    text-align: left;
 }
+
 
 .centered-image {
     display: block;
@@ -48,6 +44,7 @@ p {
     height: auto;
     border-radius: 360px;
 }
+
 
 .box-button {
     width: 9em;
@@ -82,6 +79,7 @@ p {
     width: 9em;
 }
 
+
 .content-wrapper {
     display: flex;
     justify-content: space-between;
@@ -89,9 +87,9 @@ p {
     padding: 20px;
 }
 
-.text-content {
+.content-wrapper .text-content {
     flex: 1;
-    text-align: center;
+    text-align: left;
     padding-right: 20px;
 }
 
@@ -107,6 +105,20 @@ p {
     border-radius: 10px;
     display: block;
     margin: 0 auto;
+}
+
+
+education-10 {
+    width: 100px;
+}
+
+.Education-img {
+    text-align: center;
+}
+
+h1,
+h4 {
+    text-align: center;
 }
 
 .text-content {
