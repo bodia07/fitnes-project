@@ -58,11 +58,11 @@
         .for_sect .for_box ul {
             counter-reset: list;
             margin-left: 70px;
-            ;
+            display: inline-block;
+            list-style: none;
         }
 
         .for_sect .for_box li {
-            content: counter(list);
             position: relative;
             padding-left: 71px;
             margin-bottom: 35px;
@@ -70,6 +70,7 @@
 
         .for_sect .for_box li::after {
             position: absolute;
+            
             left: -8px;
             top: calc(50% - 8px);
             transform: translateY(-50%);
@@ -80,8 +81,8 @@
         }
 
         .for_sect .for_box li::before {
-            
             position: absolute;
+            display: inline-block;
             content: '';
             left: 6px;
             top: calc(50% + 3px);
@@ -234,8 +235,6 @@
             </div>
         </div>
     </section>
-
-    
 </body>
 
 </html>
