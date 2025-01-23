@@ -4,147 +4,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sane Fitness</title>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <title>Курс</title>
     <style>
-        body {
-            margin: 0;
-            font-family: 'Oswald', sans-serif;
+        section {
+            padding-top: 50px;
+            padding-bottom: 50px;
         }
 
-        header {
-            background-color: #C7D5B4;
-            padding: 10px 20px;
-        }
-
-        header img {
-            height: 40px;
-        }
-
-        .about-me {
-            background: url('img/IMG_7569.JPG') no-repeat center center/cover;
-            padding: 100px 0;
+        h2 {
+            font-size: 35px;
+            font-family: "Source Serif 4", serif;
+            margin-bottom: 40px;
             text-align: center;
+            text-transform: uppercase;
+            color: #8C9774;
+            line-height: 1.2;
         }
 
-        .box {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 90%;
-            margin: auto;
+        .waiting_sect {
+            background-color: #BCCA99;
         }
 
-
-
-        .for-me {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px;
+        .waiting_sect h2 {
+            color: #fff;
         }
 
-        .text-content {
-            flex: 1;
-            margin-right: 20px;
-        }
-
-        .image-content {
-            flex: 1;
-        }
-
-        .image-content img {
+        .waiting_sect iframe {
             width: 100%;
-            border-radius: 10px;
+            height: 525px;
+            border-radius: 22px;
         }
 
-        @media (max-width: 768px) {
-            .about-me {
-                padding: 50px 10px;
+
+        .for_sect {
+            padding-top: 71px;
+            padding-bottom: 97px;
+        }
+
+        .for_sect h2 {
+            margin-bottom: 93px;
+        }
+
+        .for_sect .left {
+            width: 100%;
+            max-width: 604px;
+        }
+
+        .for_sect .for_box {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .for_sect .for_box ul {
+            counter-reset: list;
+            margin-left: 70px;
+            ;
+        }
+
+        .for_sect .for_box li {
+            content: counter(list);
+            position: relative;
+            padding-left: 71px;
+            margin-bottom: 35px;
+        }
+
+        .for_sect .for_box li::after {
+            position: absolute;
+            left: -8px;
+            top: calc(50% - 8px);
+            transform: translateY(-50%);
+            counter-increment: list;
+            content: '0' counter(list);
+            font-family: 'kyivtype';
+            font-size: 35px;
+        }
+
+        .for_sect .for_box li::before {
+            
+            position: absolute;
+            content: '';
+            left: 6px;
+            top: calc(50% + 3px);
+            transform: translateY(-50%);
+            width: 39px;
+            height: 39px;
+            border-radius: 50%;
+            background-color: #b39dff;
+        }
+
+
+
+
+
+
+
+
+        .on_course_sect {
+            padding: 94px 0;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-image: url('/theme/body-food/img/on_course_bg.png');
+            background-color: darkred;
+        }
+
+        .on_course_sect .box {
+            padding: 50px 0;
+            background: #494F43B2;
+            backdrop-filter: blur(10px);
+            max-width: 1240px;
+            margin: 0 auto;
+            border-radius: 26px;
+        }
+
+        .on_course_sect .box h2 {
+            color: #fff;
+            margin-bottom: 50px;
+        }
+
+        .on_course_sect .box ul {
+            padding-left: 60px;
+            counter-reset: list;
+        }
+
+        .on_course_sect .box ul li {
+            font-size: 17px;
+            color: #fff;
+            margin-bottom: 30px;
+            padding-left: 75px;
+            position: relative;
+            display: inline-block;
+            width: 49%;
+            line-height: 1.3;
+            vertical-align: text-top;
+        }
+
+        .on_course_sect .box ul li::after {
+            position: absolute;
+            counter-increment: list;
+            content: '0' counter(list);
+            position: absolute;
+            left: -12px;
+            top: calc(50% - 25px);
+            color: #fff;
+            font-family: 'kyivtype';
+            font-size: 35px;
+        }
+
+        .on_course_sect .box ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: calc(50% + 3px);
+            transform: translateY(-50%);
+            width: 39px;
+            height: 39px;
+            border-radius: 50%;
+            background-color: #A2AE85;
+        }
+
+        .on_course_sect .box ul li:nth-child(10)::after {
+            content: '10';
+        }
+
+        @media screen and (max-width:800px) {
+            .on_course_sect .box ul {
+                padding-left: 27px;
             }
 
-            .box {
-                padding: 10px;
+            .on_course_sect .box ul li {
+                padding-left: 55px;
             }
 
-            .for-me {
-                flex-direction: column;
+            .on_course_sect .box {
+                padding-bottom: 37px;
             }
 
-            .text-content {
-                margin-right: 0;
-                text-align: center;
-                margin-bottom: 20px;
+            .on_course_sect {
+                padding-bottom: 30px;
+                padding-top: 47px;
             }
-
-            .image-content {
-                text-align: center;
-            }
-
-            .image-content img {
-                width: 80%;
+        }
+        @media screen and (min-width: 1024px) {
+            .on_course_sect .box ul li {
+                width: 48%; /* Два елементи в ряд */
             }
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">ABOUT ME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">Послуги або Програми</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contacts">Контакти</a>
-                        </li>
-                    </ul>
-                </div>
-                <a href="cart.html">
-                    <img class="cart" src="img/shopping-cart-icon.png" alt="Cart">
-                </a>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="about-me">
-            <div class="box">
-                <p>SANE FITNESS</p>
-                <h2 class="display-2"><strong>FOR MYSELF</strong></h2>
-                <p>Розумний підхід до створення тіла</p>
-                <div class="box-button">
-                    <a href="#" class="btn-buy">BUY NOW</a>
-                </div>
-            </div>
-        </section>
-
-        <div id="for" class="for-me">
-            <div class="text-content">
-                <h2 class="fw-bold">ABOUT ME</h2>
-                <p>✓ Сертифікований нутриціолог та тренер</p>
-                <p>✓ Пройшла безліч поглиблених навчань в найкращих⠀спеціалістів</p>
-                <p>✓ Працювала тренером в Україні та Англії</p>
-                <p>✓ Мої продукти пройшли вже більше 5,000 людей по всьому світу</p>
-                <a href="story.html" class="btn btn-primary">Learn More</a>
-            </div>
-            <div class="image-content">
-                <img src="img/person-image.png" alt="Person Image" class="img-fluid">
+    <section class="for_sect">
+        <div class="container">
+            <h2>На курсі ти:</h2>
+            <div class="for_box">
+                <ul>
+                    <li>Дізнаєшся, що їсти, щоб підтримувати бажану вагу</li>
+                    <li>Навчишся складати раціон під свої потреби</li>
+                    <li>Скоротиш переїдання та позбудешся цієї звички</li>
+                    <li>Зменшиш тягу до солодкого </li>
+                    <li>Побудуєш свою ідеальну рутину за допомогою 7 магічних ритуалів, які заряджатимуть на цілий день
+                    </li>
+                    <li>Почнеш краще ставитися до себе та свого тіла</li>
+                    <li>Відчуєш своє тіло, вирівняєш поставу, позбудешся живота, целюліту та набряків</li>
+                    <li>Хто хоче, нарешті, влізти в свої улюблені джинси</li>
+                    <li>Скинеш зайву вагу та відновиш цикл, якщо це потрібно</li>
+                </ul>
             </div>
         </div>
-    </main>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <section class="on_course_sect">
+        <div class="container">
+            <div class="box">
+                <h2>На курсі ти:</h2>
+                <ul>
+                    <li>Зрозумієш, що тобі їсти щодня, щоб <br> утримувати бажану вагу</li>
+                    <li>Зменшиш тягу до солодкого</li>
+                    <li>Навчишся складати свій здоровий раціон <br> самостійно під свої потреби</li>
+                    <li>Зменшиш кількість переїдань та в <br> майбутньому позбудешся їх в цілому</li>
+                    <li>Запровадиш здорові харчові звички, які <br> забезпечать стійкий результат схуднення</li>
+                    <li>Знизиш вагу</li>
+                    <li>Відновиш цикл, якщо це актуально</li>
+                    <li>Зрозумієш істинну роль цінності здоров’я <br> у процесі схуднення</li>
+                    <li>Зрозумієш, як на схуднення впливають <br> інші сфери життя</li>
+                    <li>Почнеш змінювати ставлення до себе та <br> свого тіла</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    
 </body>
 
 </html>
