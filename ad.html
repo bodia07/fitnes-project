@@ -109,38 +109,38 @@
             background-color: darkred;
         }
 
-        .on_course_sect .box {
+        .on_course_sect .box1 {
             padding: 50px 0;
-            background: #494F43B2;
+            background: #5b6353b2;
             backdrop-filter: blur(10px);
             max-width: 1240px;
             margin: 0 auto;
             border-radius: 26px;
         }
 
-        .on_course_sect .box h2 {
+        .on_course_sect .box1 h2 {
             color: #fff;
             margin-bottom: 50px;
         }
 
-        .on_course_sect .box ul {
+        .on_course_sect .box1 ul {
             padding-left: 60px;
             counter-reset: list;
         }
 
-        .on_course_sect .box ul li {
+        .on_course_sect .box1 ul li {
             font-size: 17px;
             color: #fff;
             margin-bottom: 30px;
             padding-left: 75px;
             position: relative;
             display: inline-block;
-            width: 49%;
+            width: 46%;
             line-height: 1.3;
             vertical-align: text-top;
         }
 
-        .on_course_sect .box ul li::after {
+        .on_course_sect .box1 ul li::after {
             position: absolute;
             counter-increment: list;
             content: '0' counter(list);
@@ -152,7 +152,7 @@
             font-size: 35px;
         }
 
-        .on_course_sect .box ul li::before {
+        .on_course_sect .box1 ul li::before {
             content: '';
             position: absolute;
             left: 0;
@@ -164,31 +164,26 @@
             background-color: #A2AE85;
         }
 
-        .on_course_sect .box ul li:nth-child(10)::after {
+        .on_course_sect .box1 ul li:nth-child(10)::after {
             content: '10';
         }
 
         @media screen and (max-width:800px) {
-            .on_course_sect .box ul {
+            .on_course_sect .box1 ul {
                 padding-left: 27px;
             }
 
-            .on_course_sect .box ul li {
+            .on_course_sect .box1 ul li {
                 padding-left: 55px;
             }
 
-            .on_course_sect .box {
+            .on_course_sect .box1 {
                 padding-bottom: 37px;
             }
 
             .on_course_sect {
                 padding-bottom: 30px;
                 padding-top: 47px;
-            }
-        }
-        @media screen and (min-width: 1024px) {
-            .on_course_sect .box ul li {
-                width: 48%; /* Два елементи в ряд */
             }
         }
     </style>
@@ -218,7 +213,7 @@
 
     <section class="on_course_sect">
         <div class="container">
-            <div class="box">
+            <div class="box1">
                 <h2>На курсі ти:</h2>
                 <ul>
                     <li>Зрозумієш, що тобі їсти щодня, щоб <br> утримувати бажану вагу</li>
