@@ -107,7 +107,7 @@ h2 {
   background-position: center;
   background-size: cover;
   background-image: url('/theme/body-food/img/on_course_bg.png');
-  background-color: darkred;
+  background-color: rgb(52, 92, 53);
 }
 
 .on_course_sect .box1 {
@@ -172,11 +172,8 @@ h2 {
 .on_course_sect .box1 ul,
 .for_sect .for_box ul {
   display: flex;
-  /* Робимо в ряд */
   flex-wrap: wrap;
-  /* Якщо не поміщається - переносимо */
-  gap: 20px;
-  /* Відступ між стовпцями */
+  gap: 30px;
   justify-content: space-between;
 }
 
