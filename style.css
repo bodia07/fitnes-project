@@ -12,13 +12,17 @@ section {
   padding-bottom: 50px;
 }
 
+#baner-textp{
+  color: #848e6b;
+}
+
 h2 {
   font-size: 35px;
   font-family: "Source Serif 4", serif;
   margin-bottom: 40px;
   text-align: center;
   text-transform: uppercase;
-  color: #8C9774;
+  color: #000000;
   line-height: 1.2;
 }
 
@@ -235,6 +239,74 @@ h2 {
   position: relative;
   z-index: 1;
   background-color: #C7D5B4;
+}
+/* 4 слайд */
+#get {
+  margin-left: 100px;
+}
+#get ul {
+  list-style: none;
+  padding-left: 0;
+  
+}
+
+#get ul li {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  font-size: 17px;
+
+}/*
+
+#kt{
+  margin-left: 30px;
+
+}
+  */
+#get ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 24px;
+  height: 24px;
+  background-image: url('img/barbell.png'); /* Заміни на свій шлях до галочки */
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.icon-blocks {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.icon-box {
+  background-color: #f1efe6;
+  padding: 30px 20px;
+  border-radius: 16px;
+  text-align: center;
+  width: 20%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.icon-box:hover {
+  transform: translateY(-5px);
+}
+
+.icon-box img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+.icon-box p {
+  margin: 0;
+  font-size: 15px;
+  color: #4a4a4a;
+  line-height: 1.4;
 }
 
 @media (max-width: 768px) {
