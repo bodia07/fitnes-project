@@ -101,7 +101,7 @@ h2 {
   width: 39px;
   height: 39px;
   border-radius: 50%;
-  background-color: #b39dff;
+  background-color: #A2AE85;
 }
 
 
@@ -241,6 +241,64 @@ h2 {
   background-color: #C7D5B4;
 }
 /* 4 слайд */
+
+.icon-blocks {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.icon-box {
+  background-color: #f1efe6;
+  padding: 30px 20px;
+  border-radius: 16px;
+  text-align: center;
+  width: 25%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.icon-box:hover {
+  transform: translateY(-5px);
+}
+
+.icon-box img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+.icon-box p {
+  margin: 0;
+  font-size: 15px;
+  color: #4a4a4a;
+  line-height: 1.4;
+}
+.icon-text{
+  text-align: center;
+}
+#icon-text-h3{
+  text-align: left;
+}
+.about{
+  padding: 94px 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url('/theme/body-food/img/on_course_bg.png');
+  background-color: rgb(52, 92, 53);
+}
+
+.about-text{
+  color: #fff;
+}
+#about-text-h2{
+  color: #fff;
+
+}
 #get {
   margin-left: 100px;
 }
@@ -271,44 +329,16 @@ h2 {
   top: 2px;
   width: 24px;
   height: 24px;
-  background-image: url('img/barbell.png'); /* Заміни на свій шлях до галочки */
+  background-image: url('img/barbell.png'); 
+  color:#fff;
   background-size: cover;
   background-repeat: no-repeat;
 
 }
-.icon-blocks {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-left: 200px;
+#about-image img{  
+
 }
 
-.icon-box {
-  background-color: #f1efe6;
-  padding: 30px 20px;
-  border-radius: 16px;
-  text-align: center;
-  width: 25%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.icon-box:hover {
-  transform: translateY(-5px);
-}
-
-.icon-box img {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 15px;
-}
-
-.icon-box p {
-  margin: 0;
-  font-size: 15px;
-  color: #4a4a4a;
-  line-height: 1.4;
-}
 
 @media (max-width: 768px) {
   .about-me {
