@@ -4,127 +4,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sane Fitness</title>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>Sane Fitness – For Myself</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
 
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Sane Fitness – 21-денний курс «For Myself» з розумним підходом до тіла, харчування та тренувань.">
 </head>
 
 <body>
+    <!-- HEADER -->
     <header>
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
+                <a class="navbar-brand" href="#home">SANE FITNESS</a>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">ABOUT ME</a>
+                            <a class="nav-link active" href="#about">ABOUT ME</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about">Послуги або Програми</a>
+                            <a class="nav-link" href="#services">Послуги / Програми</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contacts">Контакти</a>
                         </li>
                     </ul>
+                    <a href="cart.html" class="ms-lg-3">
+                        <img class="cart"
+                            src="img/shopping-cart-icon-shopping-basket-on-transparent-background-free-png.webp"
+                            alt="Кошик">
+                    </a>
                 </div>
-                <a href="cart.html">
-                    <img class="cart"
-                        src="img/shopping-cart-icon-shopping-basket-on-transparent-background-free-png.webp" alt="Cart">
-                </a>
             </div>
         </nav>
     </header>
 
-    <main>
-        <section class="about-me" style="align-items: center;">
+    <main id="home">
+        <!-- HERO -->
+        <section class="about-me d-flex align-items-center">
             <div class="box">
                 <p id="baner-textp">SANE FITNESS</p>
-                <h2 class="display-2"> <strong>FOR MYSELF</strong></h2>
-                <p>Розумний підхід до створення тіла</p>
-                <div style="align-content: center; justify-content: center;" class="box-button">
-                    </strong><a href="#" style="text-decoration: none; color: inherit; align-content: center "
-                        class="btn-buy">BUY NOW</a>
+                <h1 class="hero-title"><strong>FOR MYSELF</strong></h1>
+                <p class="hero-subtitle">Розумний підхід до створення тіла</p>
+                <div class="box-button">
+                    <a href="#tarifs" class="btn-buy">BUY NOW</a>
                 </div>
             </div>
         </section>
 
-
-
-
-        <!--
-        <section class="myServices">
-            <div class="myservices-section">
-                <h1>MY SERVICES</h1>
-                <div class="myservices-container">
-                    <div class="myservice-item">
-                        <img src="img/IPhone_X.png" alt="Service 1">
-                        <p>ELEVATE YOUR NUTRITION</p>
-                    </div>
-                    <div class="myservice-item">
-                        <img src="img/IPhone_X.png" alt="Service 2">
-                        <p>PROGRAM "FOR MYSELF"</p>
-                    </div>
-                    <div class="myservice-item">
-                        <img src="img/IPhone_X.png" alt="Service 3">
-                        <p>HOME & GYM WORKOUTS</p>
-                    </div>
-                </div>
-                <button class="btn-myservice">MORE</button>
-            </div>
-        </section>
--->
-
+        <!-- ДЛЯ КОГО КУРС -->
         <section class="for_sect">
             <div class="container">
                 <h2>На курсі ти:</h2>
                 <div class="for_box">
                     <ul>
                         <div>
-                            <li>Ви постійно "починаєте з понеділка", але не доходите <br>до результату.</li>
+                            <li>Ви постійно «починаєте з понеділка», але не доходите до результату.</li>
                             <li>Вам важко тримати режим і дисципліну.</li>
-
                             <li>Вас демотивує дзеркало, фото чи улюблений одяг.</li>
-                            <li>Спорт викликає втому, а не задоволення. </li>
-                            <li> Хочете змін, але не знаєте, з чого почати.</li>
+                            <li>Спорт викликає втому, а не задоволення.</li>
+                            <li>Хочете змін, але не знаєте, з чого почати.</li>
                         </div>
-
                         <div>
-                            <li>Втомилися від дієт і постійного відчуття <br> що ваше тіло — не таке, як хочеться.</li>
-                            <li> Є проблеми з набряками, целюлітом, поставою, апетитом чи гормональним фоном.</li>
+                            <li>Втомилися від дієт і постійного відчуття, що ваше тіло — «не таке, як хочеться».</li>
+                            <li>Є проблеми з набряками, целюлітом, поставою, апетитом чи гормональним фоном.</li>
                             <li>Часто зриваєтесь і картаєте себе за це.</li>
-                            <li> Прагнете не просто схуднути, а повернути впевненість у собі.</li>
+                            <li>Прагнете не просто схуднути, а повернути впевненість у собі.</li>
                         </div>
                     </ul>
                 </div>
             </div>
         </section>
 
-
+        <!-- ЩО ОТРИМАЄШ ЗА 21 ДЕНЬ -->
         <section class="on_course_sect">
             <div class="container">
                 <div class="box1">
                     <h2>Що ви отримаєте під час 21-денного курсу?</h2>
                     <ul>
                         <li>Схуднете на 2–4 кг і побачите, як зникають зайві сантиметри в талії, стегнах і животі.</li>
-                        <li>Позбавитесь набряків і помітно зменшите прояви <br>целюліту — тіло стане легшим, а шкіра —
-                            рівнішою.</li>
-                        <li>Виправите поставу, активуєте м’язи тазового дна — відчуєте внутрішню опору й стабільність.
-                        </li>
-                        <li>Підтягнете сідниці, живіт стане більш пласким <br> а контури — чіткішими.</li>
-                        <li>Нарешті вдягнете улюблені речі, які раніше чекали свого часу в шафі, зрозумієте, як на
-                            схуднення впливають інші сфери життя</li>
-                        <li>Запровадите корисні харчові звички, які забезпечать стійкий результат схуднення, і зробиш
-                            здорове <br>харчування не обмеженням, а джерелом легкості <br>
-                            енергії та задоволення.</li>
-                        <li>Зрозумієте, що саме потрібно їсти щодня, навчишся самостійно складати здоровий раціон під
-                            свої потреби</li>
-                        <li>Навчитесь «чути» своє тіло — що йому потрібно, коли відпочити, коли рухатись.</li>
+                        <li>Позбавитесь набряків і помітно зменшите прояви целюліту — тіло стане легшим, а шкіра — рівнішою.</li>
+                        <li>Виправите поставу, активуєте м’язи тазового дна — відчуєте внутрішню опору й стабільність.</li>
+                        <li>Підтягнете сідниці, живіт стане більш пласким, а контури — чіткішими.</li>
+                        <li>Нарешті вдягнете улюблені речі, які раніше чекали свого часу в шафі, зрозумієте, як на схуднення впливають інші сфери життя.</li>
+                        <li>Запровадите корисні харчові звички, які забезпечать стійкий результат без зривів та голоду.</li>
+                        <li>Зрозумієте, що саме потрібно їсти щодня, навчитесь самостійно складати здоровий раціон під свої потреби.</li>
+                        <li>Навчитесь «чути» своє тіло — коли відпочити, коли рухатись.</li>
                         <li>Приймете себе — не з критикою, а з повагою, ніжністю та любов’ю.</li>
                         <li>Повернете шкірі пружність, блиск і доглянутий вигляд навіть без фільтрів.</li>
                     </ul>
@@ -132,151 +112,76 @@
             </div>
         </section>
 
+        <!-- ЩО ВХОДИТЬ (іконки) -->
         <section id="pargraf">
             <h2>Що ви отримаєте?</h2>
-            <!--
-            <p>7 корисних звичок чи ритуалів. Ти здивуєшся, що так може змінюватись твій стан та тіло без дорогих
-                процедур. Тільки домашній догляд!</p>
-            <p>15 ТРЕНУВАННЯ направлені на покращення постави, мобільність тазу, пружні сідниці та плоский живіт. + 3
-                бонусні</p>
-            <p>ХАРЧУВАННЯ: вибудуєш свою ідеальну систему харчування та навчишся їсти так, щоб отримувати результати без
-                зривів, голоду і почуття провини</p>
-            <p>Відео-Лекції (список лекцій)</p>
-            <p>Чат підтримки та мотивація. Підтримка та мотивація, відповіді на запитання від мене в чаті</p>
-            <p>Впевненість. Приймеш своє тіло, почнеш любити себе і зможеш одягнути речі, які раніше були малі</p>
 
-            <div id="get">
-                <ul>
-                    h3 id="kt">7 корисних звичок чи ритуалів</h3>
-                    <li>7 корисних звичок чи ритуалів,Ти здивуєшся, що так може змінюватись твій стан та тіло без
-                        дорогих процедур. Тільки домашній догляд!</li>
-                    <li>15 ТРЕНУВАННЯ направлені на покращення постави, мобільність тазу, пружні сідниці та плоский
-                        живіт. + 3 бонусні</li>
-                    <li>ХАРЧУВАННЯ: вибудуєш свою ідеальну систему харчування та навчишся їсти так, щоб отримувати
-                        результати без зривів, голоду і почуття провини</li>
-                    <li>Відео-Лекції (список лекцій)</li>
-                    <li>Чат підтримки та мотивація. Підтримка та мотивація, відповіді на запитання від мене в чаті</li>
-                    <li>Впевненість. Приймеш своє тіло, почнеш любити себе і зможеш одягнути речі, які раніше були малі
-                    </li>
-
-                </ul>
-            </div>
-            -->
-
-            <div class="icon-blocks">
+            <div class="icon-blocks container">
                 <div class="icon-box">
-                    <img src="img/free-icon-number-7-10323665.png" alt="https://www.flaticon.com/">
-                    <p>корисних звичок чи ритуалів,Ти здивуєшся, що так може змінюватись твій стан та тіло без
-                        дорогих процедур. Тільки домашній догляд!</p>
+                    <img src="img/free-icon-number-7-10323665.png" alt="7 корисних звичок">
+                    <p>7 корисних звичок та ритуалів. Ти здивуєшся, як змінюється стан і тіло без дорогих процедур. Тільки домашній догляд!</p>
                 </div>
                 <div class="icon-box">
-                    <img src="img/free-icon-15-10323265.png" alt="https://www.flaticon.com/">
-                    <p> ТРЕНУВАННЯ направлені на покращення постави, мобільність тазу, пружні сідниці та плоский
-                        живіт. + 3 бонусні</p>
+                    <img src="img/free-icon-15-10323265.png" alt="15 тренувань">
+                    <p>15 тренувань для покращення постави, мобільності тазу, пружних сідниць та плоского живота + 3 бонусні.</p>
                 </div>
                 <div class="icon-box">
-                    <img src="img/dish.png" alt="https://www.flaticon.com/">
-                    <p>ХАРЧУВАННЯ: вибудуєш свою ідеальну систему харчування та навчишся їсти так, щоб отримувати
-                        результати без зривів, голоду і почуття провини</p>
+                    <img src="img/dish.png" alt="Харчування">
+                    <p>Харчування: своя система без зривів, голоду і почуття провини.</p>
                 </div>
                 <div class="icon-box">
-                    <img src="img/video_lesn.png" alt="https://www.flaticon.com/">
-                    <p>Відео-Лекції (список лекцій)</p>
+                    <img src="img/video_lesn.png" alt="Відео-лекції">
+                    <p>Відео-лекції з поясненнями, чому все працює саме так.</p>
                 </div>
                 <div class="icon-box">
-                    <img src="img/chat.png" alt="https://www.flaticon.com/">
-                    <p>Чат підтримки та мотивація. Підтримка та мотивація, відповіді на запитання від мене в чаті</p>
+                    <img src="img/chat.png" alt="Чат підтримки">
+                    <p>Чат підтримки та мотивація, відповіді на запитання від мене.</p>
                 </div>
                 <div class="icon-box">
-                    <img src="img/shine.png" alt="https://www.flaticon.com/">
-                    <p>Впевненість. Приймеш своє тіло, почнеш любити себе і зможеш одягнути речі, які раніше були малі
-                    </p>
+                    <img src="img/shine.png" alt="Впевненість">
+                    <p>Впевненість у собі та тілі. Нарешті одягнеш речі, які раніше були малі.</p>
                 </div>
                 <div class="icon-text">
-                    <!-- <h3 id="icon-text-h3">Коли, як не зараз?</h3> -->
-                    <h4>Приєднуйся до курсу та відкривай для себе ефективні інструменти та стратегії, які допоможуть
-                        тобі бути у тілі твоєї мрії 365 днів на рік</h4>
+                    <h4>Приєднуйся до курсу та відкривай для себе ефективні інструменти, які допоможуть тобі бути у тілі мрії 365 днів на рік.</h4>
                 </div>
             </div>
         </section>
 
-        <!--   <section class="about">
-            <div class="about-text">
-                <h2 id="about-text-h2">About me</h2> 
-                <p>Вже понад 7 років я допомагаю людям полюбити спорт і знайти той стиль життя, який справді покращує
-                    його якість. За цей час я створила власну методику, що вже змінила тисячі життів.</p>
-                <p>Я постійно навчаюся: проходила курси як в Україні, так і за кордоном. </p>
-                <p>Маю сертифікати тренера і
-                    нутриціолога, що дозволяє мені комплексно підходити до ваших цілей — з турботою про тіло, здоров’я
-                    та баланс.</p>
-                <div id="get">
-                    <h2 id="about-text-h2">About me</h2>
-                    <ul>
-                        <li>Bже понад 7 років я допомагаю людям полюбити спорт і знайти той стиль життя, який справді
-                            покращує
-                            його якість.</li>
-                        <li>Маю сертифікати тренера і
-                            нутриціолога, що дозволяє мені комплексно підходити до ваших цілей — з турботою про тіло,
-                            здоров’я
-                            та баланс.</li>
-                        <li>Я постійно навчаюся: проходила курси як в Україні, так і за кордоном.</li>
-                        <li>За цей час я створила власну методику, що вже змінила тисячі життів.</li>
-                    </ul>
-                </div>
-                <div id="about-image">
-                    <img src="img/Дизайн без назви (3).png" alt="">
-                </div>
-
-            </div>
-        </section>
--->
-        <section class="photo-text-section">
+        <!-- ABOUT ME -->
+        <section class="photo-text-section" id="about">
             <div class="container">
                 <div class="photo-text-wrapper">
                     <div class="photo-block">
-                        <img src="img/Дизайн без назви (3).png" alt="Фото">
+                        <img src="img/Дизайн без назви (3).png" alt="Тренер Natalii">
                     </div>
                     <div class="text-block">
                         <h2>About me</h2>
-                        <p>
-                            Bже понад 7 років я допомагаю людям полюбити спорт і знайти той стиль життя, який справді
-                            покращує
-                            його якість.
-                        </p>
-                        <p>
-                            Mаю сертифікати тренера і
-                            нутриціолога, що дозволяє мені комплексно підходити до ваших цілей — з турботою про тіло,
-                            здоров’я
-                            та баланс.
-                        </p>
-                        <p>
-                            Я постійно навчаюся: проходила курси як в Україні, так і за кордоном.
-                        </p>
-                        <p>
-                            За цей час я створила власну методику, що вже змінила тисячі життів.
-                        </p>
+                        <p>Вже понад 7 років я допомагаю людям полюбити спорт і знайти стиль життя, який справді покращує його якість.</p>
+                        <p>Маю сертифікати тренера і нутриціолога, що дозволяє комплексно підходити до твоїх цілей — з турботою про тіло, здоров’я та баланс.</p>
+                        <p>Я постійно навчаюся: проходила курси як в Україні, так і за кордоном.</p>
+                        <p>За цей час я створила власну методику, що вже змінила тисячі життів.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-
-        <section>
-            <h2>МОЇ ПОСЛУГИ </h2>
+        <!-- МОЇ ПОСЛУГИ / ТАРИФИ -->
+        <section id="services">
+            <h2>МОЇ ПОСЛУГИ</h2>
             <div id="tarifs">
                 <div class="pricing-container">
                     <div class="features-list">
-                        <h2>Послуги курсу</h2>
+                        <h3>Послуги курсу</h3>
                         <ul>
                             <li>Тривалість навчання</li>
                             <li>Доступ до відеоуроків</li>
                             <li>Практична частина у воркбуці</li>
                             <li>Додаткові матеріали</li>
                             <li>Тести для засвоєння матеріалу</li>
-                            <li>6 відеоуроків від лікаря Ендокринолога</li>
-                            <li>11 відеоуроків від Гінеколога</li>
-                            <li>Особистий чат з нутріціологом</li>
-                            <li>Розбір аналізів лікарем ендокринологом</li>
+                            <li>6 відеоуроків від лікаря-ендокринолога</li>
+                            <li>11 відеоуроків від гінеколога</li>
+                            <li>Особистий чат з нутриціологом</li>
+                            <li>Розбір аналізів лікарем-ендокринологом</li>
                             <li>Відповіді від технічного куратора</li>
                             <li>Відповіді від куратора курсу</li>
                             <li>Запис 4 живих тренувань</li>
@@ -302,11 +207,11 @@
                         <div class="pricing-price">
                             <span class="old-price">600 €</span> 550 €
                         </div>
-                        <a href="#" class="buy-button">Придбати</a>
+                        <a href="#contacts" class="buy-button">Придбати</a>
                     </div>
 
                     <div class="pricing-column">
-                        <div class="pricing-header header-green">ForMyself <br> PRO</div>
+                        <div class="pricing-header header-green">ForMyself PRO</div>
                         <ul class="pricing-features">
                             <li>6 місяців</li>
                             <li class="plus">+</li>
@@ -322,110 +227,74 @@
                             <li class="plus">+</li>
                         </ul>
                         <div class="pricing-price">1250 €</div>
-                        <a href="#" class="buy-button">Придбати</a>
+                        <a href="#contacts" class="buy-button">Придбати</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="feedbacks">
-            <div>
-
-                
-            </div>
-        </section>
-
-        <section>
+        <!-- FAQ -->
+        <section class="faq-section">
             <div class="faq">
                 <div class="faq-item">
                     <button class="faq-question">Чому варто обрати саме курс від мене?</button>
                     <div class="faq-answer">
-                        <p>Привіт, я @natalii.fit Для мене дуже важливо разом досягти твоїх особистих цілей і змінити
-                            твоє життя
-                            стійким і довгостроковим чином.</p>
+                        <p>Привіт, я @natalii.fit. Для мене важливо разом досягти твоїх особистих цілей і змінити життя стійким і довгостроковим чином.</p>
                         <p>Ти маєш бути щасливою та задоволеною собою 365 днів на рік.</p>
-                        <p>Досить сумнівних дієт, міфів про тренування та харчування. Я знаю, як зробити це правильно і
-                            тому для
-                            тебе не буде практично ніяких обмежень. І я хочу поділитися цими знаннями з тобою! Тільки
-                            комфортне
-                            харчування без заборон і тренування різної інтенсивності. Насамперед ти маєш зрозуміти, що
-                            це
-                            потрібно саме тобі і ти готова змінити своє життя на краще. Моя мета, щоб ти після початку
-                            участі у
-                            курсі не відраховувала кожен день до останнього дня курсу («до свободи»), а щоб ти полюбила
-                            себе
-                            «нову» і свій «новий покращений спосіб життя». Тому, КОЛИ ЯКЩО НЕ ЗАРАЗ?!
-                        </p>
-                        <p>Приєднуйся! І вже за декілька тижнів твоє життя, моральний стан і фізична форма кардинально
-                            зміняться!</p>
+                        <p>Досить сумнівних дієт та міфів. Я знаю, як зробити це правильно, без жорстких заборон. Комфортне харчування і тренування різної інтенсивності.</p>
+                        <p>Моя мета — щоб ти не відраховувала дні «до кінця курсу», а полюбила свій новий спосіб життя. Тому: коли, якщо не зараз?</p>
                     </div>
                 </div>
+
                 <div class="faq-item">
                     <button class="faq-question">Яка тривалість тренувань?</button>
                     <div class="faq-answer">
-                        <p>Відео з тренуванням є як на 5 хвилин, так і на 30 хвилин. Ти зможеш виконати не обхідну тобі
-                            кількість кругів тренування, в залежності від твоєї підготовки.</p>
+                        <p>Є тренування від 5 до 30 хвилин. Ти зможеш виконати необхідну кількість кругів залежно від рівня підготовки.</p>
                     </div>
                 </div>
+
                 <div class="faq-item">
-                    <button class="faq-question">Я оплатила курс, що мені робити далі?</button>
+                    <button class="faq-question">Я оплатила курс, що робити далі?</button>
                     <div class="faq-answer">
-                        <p>Після успішної оплати вам потрібно буде надіслати мені квитанцію з підтвердженням</p>
+                        <p>Після успішної оплати надішли, будь ласка, квитанцію з підтвердженням – і я додам тебе до доступів.</p>
                     </div>
                 </div>
+
                 <div class="faq-item">
                     <button class="faq-question">Що, якщо я пропущу день?</button>
                     <div class="faq-answer">
-                        <p>Пропустіть це! Почніть нове тренування наступного дня. Ви завжди можете повернутися і зробити
-                            це наприкінці, якщо захочете.</p>
+                        <p>Просто продовжуй з наступного дня. Ти завжди можеш повернутися до пропущеного тренування пізніше.</p>
                     </div>
                 </div>
+
                 <div class="faq-item">
                     <button class="faq-question">Як зміниться моє тіло за 21 день?</button>
                     <div class="faq-answer">
-                        <p>Кожна людина інша, і тренування проходить по різному неможна з увіреністю сказати що ваше
-                            було буде виглядати ось так, але можна сказати що ваше тіло буде в кращому стані ніж місяць
-                            назад</p>
+                        <p>Кожне тіло індивідуальне, але точно можна сказати: за умови регулярних тренувань і харчування ти будеш у кращому стані, ніж місяць тому.</p>
                     </div>
                 </div>
             </div>
         </section>
-
-
     </main>
 
-    <!--
-    <div id="for">
-        <section class="for-me">
-            <div class="containerr row">
-                <div class="col-md-6 text-content">
-                    <h2 class="fw-bold">ABOUT ME</h2>
-                    <p>✓ Сертифікований нутриціолог та тренер</p>
-                    <p>✓ Пройшла безліч поглиблених навчань в найкращих⠀спеціалістів</p>
-                    <p>✓ Працювала тренером в Україні та Англії</p>
-                    <p>✓ Мої продукти пройшли вже більше 5,000 людей по всьому світу</p>
-                    <button class="learn-more">
-                        <span class="circle">
-                            <span class="icon arrow"></span>
-                        </span>
-                        <a href="story.html">
-                            <span class="button-text">Learn More</span>
-                        </a>
-                    </button>
-                </div>
-                <div class="col-md-6 image-content">
-                    <img src="img/Дизайн без назви (3).png" alt="Person Image" class="img-fluid mt-3">
-                </div>
+    <!-- FOOTER / CONTACTS -->
+    <footer id="contacts" class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <h3>Контакти</h3>
+                <p>Instagram: <a href="https://instagram.com/natalii.fit" target="_blank">@natalii.fit</a></p>
+                <p>Email: <a href="mailto:hello@sane-fitness.com">hello@sane-fitness.com</a></p>
             </div>
-        </section>
-    </div>
-    -->
+            <div class="footer-note">
+                <p>© 2025 Sane Fitness. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
-
-
 
 </html>

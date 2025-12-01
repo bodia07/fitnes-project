@@ -1,19 +1,73 @@
-header {
-  background-color: #C7D5B4;
-  padding: 2px 20px;
+/* ========== BASE STYLES ========== */
+
+:root {
+  --main-bg: #C7D5B4;
+  --accent: #A2AE85;
+  --accent-dark: #5c946e;
+  --text-main: #111111;
+  --muted: #848e6b;
 }
 
-header img {
-  height: 40px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  font-family: "Oswald", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text-main);
+  background-color: #f7f7f3;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ========== HEADER & NAVBAR ========== */
+
+header {
+  background-color: var(--main-bg);
+}
+
+.navbar {
+  padding: 0.6rem 0;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  font-size: 1.1rem;
+}
+
+.nav-link {
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Бургер-іконка */
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280,0,0,0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.cart {
+  height: 32px;
+}
+
+/* ========== GENERAL SECTION STYLES ========== */
 
 section {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-#baner-textp {
-  color: #848e6b;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 h2 {
@@ -26,21 +80,73 @@ h2 {
   line-height: 1.2;
 }
 
-.waiting_sect {
-  background-color: #BCCA99;
+/* ========== HERO ========== */
+
+#baner-textp {
+  color: var(--muted);
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
 }
 
-.waiting_sect h2 {
-  color: #fff;
+.about-me {
+  background: url('img/IMG_7569.JPG') no-repeat center center/cover;
+  min-height: 80vh;
+  padding: 100px 0;
+  text-align: center;
 }
 
-.waiting_sect iframe {
+.box {
+  background-color: #ffffffcf;
+  padding: 50px;
+  border-radius: 26px;
+  width: 43%;
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* Кнопка BUY NOW */
+
+.box-button {
+  width: 9em;
+  height: 3em;
+  border-radius: 30em;
+  font-size: 15px;
+  font-family: inherit;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  background-color: var(--main-bg);
+  cursor: pointer;
+}
+
+.btn-buy {
+  text-decoration: none;
+  color: #000;
   width: 100%;
-  height: 525px;
-  border-radius: 22px;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
+/* ========== FOR_SECT (ДЛЯ КОГО) ========== */
 
 .for_sect {
   padding-top: 71px;
@@ -48,17 +154,12 @@ h2 {
 }
 
 .for_sect h2 {
-  margin-bottom: 93px;
-}
-
-.for_sect .left {
-  width: 100%;
-  max-width: 604px;
+  margin-bottom: 40px;
 }
 
 .for_sect .for_box {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -75,18 +176,20 @@ h2 {
   margin-bottom: 35px;
   break-inside: avoid;
   width: 100%;
+  line-height: 1.4;
 }
+
+/* Нумерація з кружечками */
 
 .for_sect .for_box li::after {
   position: absolute;
   display: inline-block;
   left: -8px;
-  top: calc(50% - 8px);
+  top: 50%;
   transform: translateY(-50%);
   counter-increment: list;
   content: '0' counter(list);
-  font-family: 'kyivtype';
-  font-size: 35px;
+  font-size: 32px;
 }
 
 .for_sect .for_box li::before {
@@ -94,25 +197,25 @@ h2 {
   display: inline-block;
   content: '';
   left: 6px;
-  top: calc(50% + 3px);
+  top: 50%;
   transform: translateY(-50%);
   width: 39px;
   height: 39px;
   border-radius: 50%;
-  background-color: #A2AE85;
+  background-color: var(--accent);
 }
 
 .for_sect .for_box li:nth-child(10)::after {
   content: '10';
 }
 
+/* ========== ON_COURSE (21 ДЕНЬ) ========== */
 
 .on_course_sect {
   padding: 94px 0;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url('/theme/body-food/img/on_course_bg.png');
   background-color: rgb(52, 92, 53);
 }
 
@@ -133,6 +236,10 @@ h2 {
 .on_course_sect .box1 ul {
   padding-left: 60px;
   counter-reset: list;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
 }
 
 .on_course_sect .box1 ul li {
@@ -151,12 +258,10 @@ h2 {
   position: absolute;
   counter-increment: list;
   content: '0' counter(list);
-  position: absolute;
   left: -12px;
   top: calc(50% - 25px);
   color: #fff;
-  font-family: 'kyivtype';
-  font-size: 35px;
+  font-size: 32px;
 }
 
 .on_course_sect .box1 ul li::before {
@@ -168,82 +273,14 @@ h2 {
   width: 39px;
   height: 39px;
   border-radius: 50%;
-  background-color: #A2AE85;
+  background-color: var(--accent);
 }
 
 .on_course_sect .box1 ul li:nth-child(10)::after {
   content: '10';
 }
 
-.on_course_sect .box1 ul,
-.for_sect .for_box ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: space-between;
-}
-
-.for_sect .for_box li,
-.on_course_sect .box1 ul li {
-  max-width: 600px;
-  /* Максимальна ширина стовпця */
-}
-
-
-@media screen and (max-width:800px) {
-  .on_course_sect .box ul {
-    padding-left: 27px;
-  }
-
-  .on_course_sect .box ul li {
-    padding-left: 55px;
-  }
-
-  .on_course_sect .box {
-    padding-bottom: 37px;
-  }
-
-  .on_course_sect {
-    padding-bottom: 30px;
-    padding-top: 47px;
-  }
-}
-
-.about-me {
-  background: url('img/IMG_7569.JPG') no-repeat center center/cover;
-  padding: 100px 0;
-  text-align: center;
-}
-
-.box {
-  background-color: #ffffffcf;
-  padding: 50px;
-  border-radius: 26px;
-  width: 43%;
-  max-width: 600px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.box-button {
-  width: 9em;
-  height: 3em;
-  border-radius: 30em;
-  font-size: 15px;
-  font-family: inherit;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-  background-color: #C7D5B4;
-}
-
-/* 4 слайд */
+/* ========== ICON BLOCKS ========== */
 
 .icon-blocks {
   display: flex;
@@ -271,7 +308,8 @@ h2 {
 .icon-box img {
   width: 40px;
   height: 40px;
-  margin-bottom: 15px;
+  display: block;
+  margin: 0 auto 15px auto; 
 }
 
 .icon-box p {
@@ -283,77 +321,10 @@ h2 {
 
 .icon-text {
   text-align: center;
+  margin-top: 20px;
 }
 
-#icon-text-h3 {
-  text-align: left;
-}
-
-.about {
-  padding: 94px 0;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-image: url('/theme/body-food/img/on_course_bg.png');
-  background-color: rgb(52, 92, 53);
-}
-
-.about-text {
-  color: #fff;
-}
-
-#about-text-h2 {
-  color: #fff;
-
-}
-
-#get {
-  margin-left: 100px;
-}
-
-#get ul {
-  list-style: none;
-  padding-left: 0;
-
-}
-
-#get ul li {
-  position: relative;
-  padding-left: 40px;
-  margin-bottom: 15px;
-  line-height: 1.5;
-  font-size: 17px;
-
-}
-
-/*  sho vy otrymaite  */
-#get ul li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 2px;
-  width: 24px;
-  height: 24px;
-  background-image: url('img/barbell.png');
-  color: #fff;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-}
-
-#about-image {
-  display: flex;
-  justify-content: flex-end;
-
-
-}
-
-#about-image img {
-  max-width: 30%;
-  max-height: 30%;
-
-
-}
+/* ========== ABOUT (PHOTO + TEXT) ========== */
 
 .photo-text-section {
   padding: 60px 20px;
@@ -378,7 +349,6 @@ h2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
 .text-block {
@@ -401,99 +371,7 @@ h2 {
   margin-bottom: 16px;
 }
 
-
-/*question&answers*/
-.faq {
-  max-width: 1200px;
-  margin: 0 auto;
-  font-family: sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* Центрування дітей по горизонталі */
-}
-
-.faq-item {
-  border-bottom: 1px solid #ddd;
-  padding: 15px 0;
-  width: 80%;
-}
-
-.faq-question {
-  width: 100%;
-  background: none;
-  border: none;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: left;
-  cursor: pointer;
-  position: relative;
-}
-
-.faq-question::after {
-  content: '+';
-  position: absolute;
-  right: 0;
-  font-size: 24px;
-  transition: transform 0.3s;
-}
-
-.faq-question.active::after {
-  content: '×';
-  transform: rotate(90deg);
-}
-
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  font-size: 16px;
-  padding-top: 5px;
-  padding-left: 7px;
-}
-
-.faq-question.active+.faq-answer {
-  max-height: 900px;
-}
-
-
-
-.for-me .containerr {
-  align-items: center;
-  justify-content: space-between;
-  margin: 5%;
-}
-
-.text-content {
-  text-align: left;
-  padding-left: 180px;
-  font-size: larger;
-}
-
-.image-content {
-  text-align: right;
-}
-
-.image-content img {
-  max-width: 100%;
-  height: 600px;
-  border-radius: 50px;
-}
-
-main .myServices {
-  padding-top: 50px;
-  margin: 0;
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f4f4f4;
-}
-
-#for {
-  text-align: center;
-}
+/* ========== PRICING / ТАРИФИ ========== */
 
 #tarifs {
   font-family: Arial, sans-serif;
@@ -512,14 +390,14 @@ main .myServices {
 }
 
 .features-list {
-  width: 250px;
+  width: 260px;
   background-color: #f4f4f4;
   border-radius: 15px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.features-list h2 {
+.features-list h3 {
   text-align: center;
   color: #333;
   margin-bottom: 20px;
@@ -528,6 +406,7 @@ main .myServices {
 .features-list ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .features-list li {
@@ -557,15 +436,11 @@ main .myServices {
 }
 
 .header-green {
-  background-color: #5c946e;
+  background-color: var(--accent-dark);
 }
 
 .header-yellow {
   background-color: #f0ad4e;
-}
-
-.header-red {
-  background-color: #d9534f;
 }
 
 .pricing-features {
@@ -624,112 +499,129 @@ main .myServices {
   background-color: #0056b3;
 }
 
-.myservices-section {
-  text-align: center;
+/* ========== FAQ ========== */
+
+.faq-section {
+  padding-top: 40px;
+  padding-bottom: 80px;
 }
 
-.myservices-section h1 {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.myservices-container {
-  display: flex;
-  justify-content: center;
-  gap: 70px;
-}
-
-.myservice-item {
+.faq {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
+   gap: 15px;
 }
 
-.myservice-item img {
-  width: 200px;
-  height: 400px;
-  object-fit: cover;
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 20px; /* збільшили відступи */
+  width: 90%;         /* FAQ ширший, але текст дихає */
+  margin: 0 auto;     /* центрує блок */
+  border-radius: 12px; /* легке округлення для краси */
+  background: #fff;   /* щоб блок виглядав окремим */
 }
 
-.myservice-item p {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-.btn-myservice {
-  margin-top: 20px;
-  padding: 10px 20px;
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
   font-size: 18px;
   font-weight: bold;
-  background-color: black;
-  color: white;
-  border: none;
-  border-radius: 20px;
+  text-align: left;
   cursor: pointer;
-  margin-bottom: 200px;
+  position: relative;
 }
 
-@media (max-width: 992px) {
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  font-size: 24px;
+  transition: transform 0.3s;
+}
 
-  /* HERO */
+.faq-question.active::after {
+  content: '×';
+  transform: rotate(90deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  font-size: 16px;
+  padding-top: 5px;
+  padding-left: 7px;
+}
+
+.faq-question.active + .faq-answer {
+  max-height: 900px;
+}
+
+/* ========== FOOTER ========== */
+
+.site-footer {
+  background-color: #222;
+  color: #eee;
+  padding: 30px 0;
+  font-size: 14px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.site-footer a {
+  color: #C7D5B4;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 992px) {
   .box {
     width: 80%;
     padding: 30px;
   }
 
-  /* Основний контейнер */
-  .for_sect {
-    padding-top: 50px;
-    padding-bottom: 70px;
-  }
-
-  /* Робимо колонки одна під одною */
   .for_sect .for_box {
     flex-direction: column;
     align-items: flex-start;
     gap: 30px;
   }
 
-  /* Списки */
   .for_sect .for_box ul {
     margin-left: 0;
     padding-left: 0;
     width: 100%;
   }
 
-  /* Кожен пункт */
   .for_sect .for_box li {
     padding-left: 60px;
     max-width: 100%;
     font-size: 16px;
   }
 
-  /* Цифра */
-  .for_sect .for_box li::after {
-    font-size: 28px;
-    left: -6px;
-  }
-
-  /* Коло */
-  .for_sect .for_box li::before {
-    width: 32px;
-    height: 32px;
-    left: 3px;
-  }
-
-  /* on_course */
   .on_course_sect .box1 ul li {
     width: 100%;
     max-width: 100%;
   }
 
-  /* icon blocks */
   .icon-box {
     width: 45%;
   }
 
-  /* photo-text */
   .photo-text-wrapper {
     flex-direction: column;
   }
@@ -738,7 +630,6 @@ main .myServices {
     padding: 25px;
   }
 
-  /* pricing */
   .pricing-container {
     flex-direction: column;
     align-items: center;
@@ -751,13 +642,10 @@ main .myServices {
 }
 
 @media (max-width: 600px) {
-
-  /* Заголовки */
   h2 {
     font-size: 24px;
   }
 
-  /* HERO секція */
   .about-me {
     padding: 60px 15px 40px 15px;
   }
@@ -767,34 +655,19 @@ main .myServices {
     padding: 25px;
   }
 
-  /* ====== FOR_SECT — пробіл між блоками ====== */
   .for_sect {
-    padding-top: 10px !important;
+    padding-top: 20px;
     padding-bottom: 50px;
   }
 
   .for_sect h2 {
-    margin-top: 0 !important;
     margin-bottom: 25px;
-  }
-
-  .for_sect .for_box {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .for_sect .for_box ul {
-    width: 100%;
-    margin-left: 0;
-    padding-left: 0;
   }
 
   .for_sect .for_box li {
     padding-left: 50px;
     margin-bottom: 20px;
-    width: 100%;
     font-size: 15px;
-    line-height: 1.35;
   }
 
   .for_sect .for_box li::before {
@@ -808,14 +681,12 @@ main .myServices {
     left: -4px;
   }
 
-  /* ===== FIX left padding in on_course_sect on mobile ===== */
   .on_course_sect .box1 ul {
     padding-left: 0;
   }
 
   .on_course_sect .box1 ul li {
     padding-left: 50px;
-    width: 100%;
     margin-bottom: 20px;
   }
 
@@ -830,29 +701,12 @@ main .myServices {
     left: -4px;
   }
 
-  /* ===== ICON BLOCKS ===== */
-  .icon-box {
-    width: 100%;
-  }
-
   .icon-blocks {
-    display: flex;
-    flex-wrap: wrap;
     gap: 15px;
   }
 
   .icon-box {
     width: calc(50% - 10px);
-    text-align: center;
-  }
-
-  .icon-box img {
-    margin: 0 auto 10px auto;
-  }
-
-  /* ===== PHOTO + TEXT BLOCK ===== */
-  .photo-text-wrapper {
-    flex-direction: column;
   }
 
   .photo-block img {
@@ -860,23 +714,8 @@ main .myServices {
     object-fit: cover;
   }
 
-  .text-block {
-    padding: 25px;
-  }
-
-  /* ===== PRICING ===== */
   #tarifs {
     padding: 10px;
-  }
-
-  .pricing-container {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .pricing-column,
-  .features-list {
-    width: 100%;
   }
 
   .pricing-features li {
@@ -891,12 +730,10 @@ main .myServices {
     width: 100%;
   }
 
-  /* ===== FAQ ===== */
   .faq-item {
     width: 100%;
   }
 
-  /* Navbar */
   .navbar .container {
     flex-wrap: nowrap;
     gap: 10px;
@@ -904,5 +741,10 @@ main .myServices {
 
   .cart {
     height: 28px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
