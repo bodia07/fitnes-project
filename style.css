@@ -586,6 +586,123 @@ h2 {
 .site-footer a:hover {
   text-decoration: underline;
 }
+/* =================== ТАРИФИ =================== */
+
+.tariffs-section {
+  padding: 70px 0;
+  background-color: #f8f6f1;
+}
+
+.tariffs-section h2 {
+  margin-bottom: 40px;
+}
+
+.tariffs-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.tariff-card {
+  flex: 1;
+  background: #f4f1eb;
+  border-radius: 18px;
+  padding: 25px 22px 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.tariff-name {
+  font-family: "Source Serif 4", serif;
+  font-size: 22px;
+  text-align: center;
+  margin: 0 0 5px;
+}
+
+.tariff-tagline {
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 18px;
+}
+
+.tariff-subtitle {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.tariff-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 25px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.tariff-list li + li {
+  margin-top: 8px;
+}
+
+.tariff-price {
+  margin-top: auto;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Керування слайдером (стрілки + точки) */
+
+.tariff-controls {
+  margin-top: 20px;
+  display: none; /* на компі не показуємо, тільки на мобілі */
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.tariff-prev,
+.tariff-next {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  background-color: #c7d5b4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tariff-prev:hover,
+.tariff-next:hover {
+  background-color: #aebd96;
+}
+
+.tariff-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.tariff-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.tariff-dots .dot.active {
+  background-color: #5c946e;
+}
 
 /* ========== RESPONSIVE ========== */
 
@@ -638,6 +755,24 @@ h2 {
   .pricing-column,
   .features-list {
     width: 100%;
+  }
+  
+    .tariffs-wrapper {
+    /* показуємо лише одну картку */
+    position: relative;
+  }
+
+  .tariff-card {
+    display: none;
+    max-width: 100%;
+  }
+
+  .tariff-card.active {
+    display: flex;
+  }
+
+  .tariff-controls {
+    display: flex; /* на мобілі вмикаємо керування */
   }
 }
 
@@ -746,5 +881,23 @@ h2 {
   .footer-inner {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+    .tariffs-wrapper {
+    /* показуємо лише одну картку */
+    position: relative;
+  }
+
+  .tariff-card {
+    display: none;
+    max-width: 100%;
+  }
+
+  .tariff-card.active {
+    display: flex;
+  }
+
+  .tariff-controls {
+    display: flex; /* на мобілі вмикаємо керування */
   }
 }

@@ -21,3 +21,42 @@ document.querySelectorAll('.faq-question').forEach(button => {
     }
   });
 });
+
+// ---------- Слайдер тарифів ----------
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.tariff-card');
+  const prevBtn = document.querySelector('.tariff-prev');
+  const nextBtn = document.querySelector('.tariff-next');
+  const dots = document.querySelectorAll('.tariff-dots .dot');
+
+  if (!cards.length || !prevBtn || !nextBtn) return;
+
+  let current = 0;
+
+  function showTariff(index) {
+    current = (index + cards.length) % cards.length;
+
+    cards.forEach((card, i) => {
+      card.classList.toggle('active', i === current);
+    });
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === current);
+    });
+  }
+
+  prevBtn.addEventListener('click', () => {
+    showTariff(current - 1);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    showTariff(current + 1);
+  });
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const index = Number(dot.dataset.index);
+      showTariff(index);
+    });
+  });
+});
