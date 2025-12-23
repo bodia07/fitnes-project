@@ -309,7 +309,7 @@ h2 {
   width: 40px;
   height: 40px;
   display: block;
-  margin: 0 auto 15px auto; 
+  margin: 0 auto 15px auto;
 }
 
 .icon-box p {
@@ -513,16 +513,21 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-   gap: 15px;
+  gap: 15px;
 }
 
 .faq-item {
   border-bottom: 1px solid #ddd;
-  padding: 20px 20px; /* збільшили відступи */
-  width: 90%;         /* FAQ ширший, але текст дихає */
-  margin: 0 auto;     /* центрує блок */
-  border-radius: 12px; /* легке округлення для краси */
-  background: #fff;   /* щоб блок виглядав окремим */
+  padding: 20px 20px;
+  /* збільшили відступи */
+  width: 90%;
+  /* FAQ ширший, але текст дихає */
+  margin: 0 auto;
+  /* центрує блок */
+  border-radius: 12px;
+  /* легке округлення для краси */
+  background: #fff;
+  /* щоб блок виглядав окремим */
 }
 
 .faq-question {
@@ -558,9 +563,82 @@ h2 {
   padding-left: 7px;
 }
 
-.faq-question.active + .faq-answer {
+.faq-question.active+.faq-answer {
   max-height: 900px;
 }
+
+/* ========== REVIEWS SLIDER ========== */
+
+.reviews-section {
+  padding: 70px 0;
+  background-color: #f8f6f1;
+}
+
+.reviews-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 18px;
+}
+
+.reviews-track {
+  display: flex;
+  gap: 20px;
+  will-change: transform;
+  transition: transform 600ms ease;
+}
+
+.review-slide {
+  flex: 0 0 calc((100% - 20px) / 2);
+  /* 2 слайди + 1 gap */
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.review-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* якщо скріни і не хочеш обрізання -> contain */
+  display: block;
+}
+
+
+.reviews-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.reviews-btn:hover {
+  background: rgba(0, 0, 0, 0.75);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.reviews-btn.prev {
+  left: 10px;
+}
+
+.reviews-btn.next {
+  right: 10px;
+}
+
 
 /* ========== FOOTER ========== */
 
@@ -586,6 +664,7 @@ h2 {
 .site-footer a:hover {
   text-decoration: underline;
 }
+
 /* =================== ТАРИФИ =================== */
 
 .tariffs-section {
@@ -609,7 +688,7 @@ h2 {
   background: #f4f1eb;
   border-radius: 18px;
   padding: 25px 22px 30px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
 }
@@ -646,7 +725,7 @@ h2 {
   line-height: 1.4;
 }
 
-.tariff-list li + li {
+.tariff-list li+li {
   margin-top: 8px;
 }
 
@@ -661,7 +740,8 @@ h2 {
 
 .tariff-controls {
   margin-top: 20px;
-  display: none; /* на компі не показуємо, тільки на мобілі */
+  display: none;
+  /* на компі не показуємо, тільки на мобілі */
   align-items: center;
   justify-content: center;
   gap: 16px;
@@ -756,8 +836,8 @@ h2 {
   .features-list {
     width: 100%;
   }
-  
-    .tariffs-wrapper {
+
+  .tariffs-wrapper {
     /* показуємо лише одну картку */
     position: relative;
   }
@@ -772,7 +852,21 @@ h2 {
   }
 
   .tariff-controls {
-    display: flex; /* на мобілі вмикаємо керування */
+    display: flex;
+    /* на мобілі вмикаємо керування */
+  }
+
+  .review-slide {
+    flex: 0 0 100%;
+    height: 600px;
+    /* або зробимо адаптивно нижче */
+  }
+
+  .review-slide img {
+    width: 100%;
+    height: 100% !important;
+    object-fit: contain !important;
+    display: block;
   }
 }
 
@@ -883,7 +977,7 @@ h2 {
     align-items: flex-start;
   }
 
-    .tariffs-wrapper {
+  .tariffs-wrapper {
     /* показуємо лише одну картку */
     position: relative;
   }
@@ -898,6 +992,22 @@ h2 {
   }
 
   .tariff-controls {
-    display: flex; /* на мобілі вмикаємо керування */
+    display: flex;
+    /* на мобілі вмикаємо керування */
+  }
+
+  .review-slide img {
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+
+  .reviews-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 22px;
+  }
+
+  .review-slide {
+    height: 600px;
   }
 }
