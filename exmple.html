@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Опитування</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9fafc;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+
+        iframe {
+            display: block;
+            margin: 30px auto;
+            width: 100%;
+            max-width: 800px;
+            height: 700px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq {
+            max-width: 600px;
+            margin: 0 auto;
+            font-family: sans-serif;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+            width: 80%;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: left;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            font-size: 24px;
+            transition: transform 0.3s;
+        }
+
+        .faq-question.active::after {
+            content: '×';
+            transform: rotate(90deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            font-size: 16px;
+            padding-top: 5px;
+        }
+
+        .faq-question.active+.faq-answer {
+            max-height: 900px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ми цінуємо вашу думку!</h1>
+    <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=your-form-id" loading="lazy">
+        Завантаження форми…
+    </iframe>
+
+    <div class="faq">
+        <div class="faq-item">
+            <button class="faq-question">Чому варто обрати саме курс від мене?</button>
+            <div class="faq-answer">
+                <p>Привіт, я @natalii.fit Для мене дуже важливо разом досягти твоїх особистих цілей і змінити твоє життя
+                    стійким і довгостроковим чином.</p>
+                <p>Ти маєш бути щасливою та задоволеною собою 365 днів на рік.</p>
+                <p>Досить сумнівних дієт, міфів про тренування та харчування. Я знаю, як зробити це правильно і тому для
+                    тебе не буде практично ніяких обмежень. І я хочу поділитися цими знаннями з тобою! Тільки комфортне
+                    харчування без заборон і тренування різної інтенсивності. Насамперед ти маєш зрозуміти, що це
+                    потрібно саме тобі і ти готова змінити своє життя на краще. Моя мета, щоб ти після початку участі у
+                    курсі не відраховувала кожен день до останнього дня курсу («до свободи»), а щоб ти полюбила себе
+                    «нову» і свій «новий покращений спосіб життя». Тому, КОЛИ ЯКЩО НЕ ЗАРАЗ?!
+                </p>
+                <p>Приєднуйся! І вже за декілька тижнів твоє життя, моральний стан і фізична форма кардинально зміняться!</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Яка тривалість тренувань?</button>
+            <div class="faq-answer">
+                <p>Відео з тренуванням є як на 5 хвилин, так і на 30 хвилин. Ти зможеш виконати не обхідну тобі кількість кругів тренування, в залежності від твоєї підготовки.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Я оплатила курс, що мені робити далі?</button>
+            <div class="faq-answer">
+                <p>Після успішної оплати вам потрібно буде надіслати мені квитанцію з підтвердженням</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Що, якщо я пропущу день?</button>
+            <div class="faq-answer">
+                <p>Пропустіть це! Почніть нове тренування наступного дня. Ви завжди можете повернутися і зробити це наприкінці, якщо захочете.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Як зміниться моє тіло за 21 день?</button>
+            <div class="faq-answer">
+                <p>Кожна людина інша, і тренування проходить по різному неможна з увіреністю сказати що ваше було буде виглядати ось так, але   можна сказати що ваше тіло буде в кращому стані ніж місяць назад</p>
+            </div>
+        </div>
+     
+    </div>
+
+</body> 
+<script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            button.classList.toggle('active');
+            const answer = button.nextElementSibling;
+            if (button.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            } else {
+                answer.style.maxHeight = null;
+            }
+        });
+    });
+</script>
+
+</html>

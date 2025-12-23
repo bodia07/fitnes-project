@@ -1,0 +1,1013 @@
+/* ========== BASE STYLES ========== */
+
+:root {
+  --main-bg: #C7D5B4;
+  --accent: #A2AE85;
+  --accent-dark: #5c946e;
+  --text-main: #111111;
+  --muted: #848e6b;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Oswald", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text-main);
+  background-color: #f7f7f3;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ========== HEADER & NAVBAR ========== */
+
+header {
+  background-color: var(--main-bg);
+}
+
+.navbar {
+  padding: 0.6rem 0;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  font-size: 1.1rem;
+}
+
+.nav-link {
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Бургер-іконка */
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280,0,0,0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.cart {
+  height: 32px;
+}
+
+/* ========== GENERAL SECTION STYLES ========== */
+
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+h2 {
+  font-size: 35px;
+  font-family: "Source Serif 4", serif;
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  line-height: 1.2;
+}
+
+/* ========== HERO ========== */
+
+#baner-textp {
+  color: var(--muted);
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+}
+
+.about-me {
+  background: url('img/IMG_7569.JPG') no-repeat center center/cover;
+  min-height: 80vh;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.box {
+  background-color: #ffffffcf;
+  padding: 50px;
+  border-radius: 26px;
+  width: 43%;
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* Кнопка BUY NOW */
+
+.box-button {
+  width: 9em;
+  height: 3em;
+  border-radius: 30em;
+  font-size: 15px;
+  font-family: inherit;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  background-color: var(--main-bg);
+  cursor: pointer;
+}
+
+.btn-buy {
+  text-decoration: none;
+  color: #000;
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========== FOR_SECT (ДЛЯ КОГО) ========== */
+
+.for_sect {
+  padding-top: 71px;
+  padding-bottom: 97px;
+}
+
+.for_sect h2 {
+  margin-bottom: 40px;
+}
+
+.for_sect .for_box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.for_sect .for_box ul {
+  counter-reset: list;
+  margin-left: 70px;
+  display: inline-block;
+  list-style: none;
+}
+
+.for_sect .for_box li {
+  position: relative;
+  padding-left: 71px;
+  margin-bottom: 35px;
+  break-inside: avoid;
+  width: 100%;
+  line-height: 1.4;
+}
+
+/* Нумерація з кружечками */
+
+.for_sect .for_box li::after {
+  position: absolute;
+  display: inline-block;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  counter-increment: list;
+  content: '0' counter(list);
+  font-size: 32px;
+}
+
+.for_sect .for_box li::before {
+  position: absolute;
+  display: inline-block;
+  content: '';
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  background-color: var(--accent);
+}
+
+.for_sect .for_box li:nth-child(10)::after {
+  content: '10';
+}
+
+/* ========== ON_COURSE (21 ДЕНЬ) ========== */
+
+.on_course_sect {
+  padding: 94px 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: rgb(52, 92, 53);
+}
+
+.on_course_sect .box1 {
+  padding: 50px 0;
+  background: #5b6353b2;
+  backdrop-filter: blur(10px);
+  max-width: 1240px;
+  margin: 0 auto;
+  border-radius: 26px;
+}
+
+.on_course_sect .box1 h2 {
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.on_course_sect .box1 ul {
+  padding-left: 60px;
+  counter-reset: list;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.on_course_sect .box1 ul li {
+  font-size: 17px;
+  color: #fff;
+  margin-bottom: 30px;
+  padding-left: 75px;
+  position: relative;
+  display: inline-block;
+  width: 46%;
+  line-height: 1.3;
+  vertical-align: text-top;
+}
+
+.on_course_sect .box1 ul li::after {
+  position: absolute;
+  counter-increment: list;
+  content: '0' counter(list);
+  left: -12px;
+  top: calc(50% - 25px);
+  color: #fff;
+  font-size: 32px;
+}
+
+.on_course_sect .box1 ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: calc(50% + 3px);
+  transform: translateY(-50%);
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  background-color: var(--accent);
+}
+
+.on_course_sect .box1 ul li:nth-child(10)::after {
+  content: '10';
+}
+
+/* ========== ICON BLOCKS ========== */
+
+.icon-blocks {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.icon-box {
+  background-color: #f1efe6;
+  padding: 30px 20px;
+  border-radius: 16px;
+  text-align: center;
+  width: 25%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.icon-box:hover {
+  transform: translateY(-5px);
+}
+
+.icon-box img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin: 0 auto 15px auto;
+}
+
+.icon-box p {
+  margin: 0;
+  font-size: 15px;
+  color: #4a4a4a;
+  line-height: 1.4;
+}
+
+.icon-text {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ========== ABOUT (PHOTO + TEXT) ========== */
+
+.photo-text-section {
+  padding: 60px 20px;
+  background-color: #9aae7e;
+}
+
+.photo-text-wrapper {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.photo-block {
+  flex: 1;
+}
+
+.photo-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-block {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-block h2 {
+  margin-top: 0;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.text-block p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* ========== PRICING / ТАРИФИ ========== */
+
+#tarifs {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.pricing-container {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  align-items: flex-start;
+}
+
+.features-list {
+  width: 260px;
+  background-color: #f4f4f4;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.features-list h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.features-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.pricing-column {
+  flex: 1;
+  background-color: #f4f4f4;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pricing-header {
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 15px 15px 0 0;
+}
+
+.header-green {
+  background-color: var(--accent-dark);
+}
+
+.header-yellow {
+  background-color: #f0ad4e;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.pricing-features li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  font-size: 16px;
+}
+
+.plus {
+  color: #28a745;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.minus {
+  color: #dc3545;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.pricing-price {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.buy-button {
+  display: block;
+  width: 80%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: #0056b3;
+}
+
+/* ========== FAQ ========== */
+
+.faq-section {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.faq {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 20px;
+  /* збільшили відступи */
+  width: 90%;
+  /* FAQ ширший, але текст дихає */
+  margin: 0 auto;
+  /* центрує блок */
+  border-radius: 12px;
+  /* легке округлення для краси */
+  background: #fff;
+  /* щоб блок виглядав окремим */
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}
+
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  font-size: 24px;
+  transition: transform 0.3s;
+}
+
+.faq-question.active::after {
+  content: '×';
+  transform: rotate(90deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  font-size: 16px;
+  padding-top: 5px;
+  padding-left: 7px;
+}
+
+.faq-question.active+.faq-answer {
+  max-height: 900px;
+}
+
+/* ========== REVIEWS SLIDER ========== */
+
+.reviews-section {
+  padding: 70px 0;
+  background-color: #f8f6f1;
+}
+
+.reviews-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 18px;
+}
+
+.reviews-track {
+  display: flex;
+  gap: 20px;
+  will-change: transform;
+  transition: transform 600ms ease;
+}
+
+.review-slide {
+  flex: 0 0 calc((100% - 20px) / 2);
+  /* 2 слайди + 1 gap */
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.review-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* якщо скріни і не хочеш обрізання -> contain */
+  display: block;
+}
+
+
+.reviews-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.reviews-btn:hover {
+  background: rgba(0, 0, 0, 0.75);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.reviews-btn.prev {
+  left: 10px;
+}
+
+.reviews-btn.next {
+  right: 10px;
+}
+
+
+/* ========== FOOTER ========== */
+
+.site-footer {
+  background-color: #222;
+  color: #eee;
+  padding: 30px 0;
+  font-size: 14px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.site-footer a {
+  color: #C7D5B4;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* =================== ТАРИФИ =================== */
+
+.tariffs-section {
+  padding: 70px 0;
+  background-color: #f8f6f1;
+}
+
+.tariffs-section h2 {
+  margin-bottom: 40px;
+}
+
+.tariffs-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.tariff-card {
+  flex: 1;
+  background: #f4f1eb;
+  border-radius: 18px;
+  padding: 25px 22px 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.tariff-name {
+  font-family: "Source Serif 4", serif;
+  font-size: 22px;
+  text-align: center;
+  margin: 0 0 5px;
+}
+
+.tariff-tagline {
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 18px;
+}
+
+.tariff-subtitle {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.tariff-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 25px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.tariff-list li+li {
+  margin-top: 8px;
+}
+
+.tariff-price {
+  margin-top: auto;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Керування слайдером (стрілки + точки) */
+
+.tariff-controls {
+  margin-top: 20px;
+  display: none;
+  /* на компі не показуємо, тільки на мобілі */
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.tariff-prev,
+.tariff-next {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  background-color: #c7d5b4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tariff-prev:hover,
+.tariff-next:hover {
+  background-color: #aebd96;
+}
+
+.tariff-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.tariff-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.tariff-dots .dot.active {
+  background-color: #5c946e;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 992px) {
+  .box {
+    width: 80%;
+    padding: 30px;
+  }
+
+  .for_sect .for_box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .for_sect .for_box ul {
+    margin-left: 0;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .for_sect .for_box li {
+    padding-left: 60px;
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .on_course_sect .box1 ul li {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .icon-box {
+    width: 45%;
+  }
+
+  .photo-text-wrapper {
+    flex-direction: column;
+  }
+
+  .text-block {
+    padding: 25px;
+  }
+
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-column,
+  .features-list {
+    width: 100%;
+  }
+
+  .tariffs-wrapper {
+    /* показуємо лише одну картку */
+    position: relative;
+  }
+
+  .tariff-card {
+    display: none;
+    max-width: 100%;
+  }
+
+  .tariff-card.active {
+    display: flex;
+  }
+
+  .tariff-controls {
+    display: flex;
+    /* на мобілі вмикаємо керування */
+  }
+
+  .review-slide {
+    flex: 0 0 100%;
+    height: 600px;
+    /* або зробимо адаптивно нижче */
+  }
+
+  .review-slide img {
+    width: 100%;
+    height: 100% !important;
+    object-fit: contain !important;
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 24px;
+  }
+
+  .about-me {
+    padding: 60px 15px 40px 15px;
+  }
+
+  .box {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .for_sect {
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+
+  .for_sect h2 {
+    margin-bottom: 25px;
+  }
+
+  .for_sect .for_box li {
+    padding-left: 50px;
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+
+  .for_sect .for_box li::before {
+    width: 28px;
+    height: 28px;
+    left: 2px;
+  }
+
+  .for_sect .for_box li::after {
+    font-size: 24px;
+    left: -4px;
+  }
+
+  .on_course_sect .box1 ul {
+    padding-left: 0;
+  }
+
+  .on_course_sect .box1 ul li {
+    padding-left: 50px;
+    margin-bottom: 20px;
+  }
+
+  .on_course_sect .box1 ul li::before {
+    width: 28px;
+    height: 28px;
+    left: 2px;
+  }
+
+  .on_course_sect .box1 ul li::after {
+    font-size: 24px;
+    left: -4px;
+  }
+
+  .icon-blocks {
+    gap: 15px;
+  }
+
+  .icon-box {
+    width: calc(50% - 10px);
+  }
+
+  .photo-block img {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  #tarifs {
+    padding: 10px;
+  }
+
+  .pricing-features li {
+    font-size: 14px;
+  }
+
+  .pricing-price {
+    font-size: 20px;
+  }
+
+  .buy-button {
+    width: 100%;
+  }
+
+  .faq-item {
+    width: 100%;
+  }
+
+  .navbar .container {
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
+  .cart {
+    height: 28px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tariffs-wrapper {
+    /* показуємо лише одну картку */
+    position: relative;
+  }
+
+  .tariff-card {
+    display: none;
+    max-width: 100%;
+  }
+
+  .tariff-card.active {
+    display: flex;
+  }
+
+  .tariff-controls {
+    display: flex;
+    /* на мобілі вмикаємо керування */
+  }
+
+  .review-slide img {
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+
+  .reviews-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 22px;
+  }
+
+  .review-slide {
+    height: 600px;
+  }
+}
