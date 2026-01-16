@@ -324,6 +324,21 @@ h2 {
   margin-top: 20px;
 }
 
+.format-intro {
+  max-width: 800px;
+  margin: 0 auto 35px auto;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #6b6b6b;
+}
+
+.icon-box h3 {
+  font-size: 16px;
+  margin: 10px 0 10px;
+  text-transform: none;
+}
+
 /* ========== ABOUT (PHOTO + TEXT) ========== */
 
 .photo-text-section {
@@ -497,6 +512,142 @@ h2 {
 
 .buy-button:hover {
   background-color: #0056b3;
+}
+
+/* ========== ДОДАТКОВІ ПОСЛУГИ ========== */
+
+.extra-section {
+  padding: 70px 0;
+  background-color: #f8f6f1;
+}
+
+.extra-section h2 {
+  margin-bottom: 40px;
+}
+
+.extra-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.extra-card {
+  background: #f4f1eb;
+  border-radius: 18px;
+  padding: 22px 20px 26px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.extra-title {
+  font-family: "Source Serif 4", serif;
+  font-size: 20px;
+  margin: 0 0 8px;
+}
+
+.extra-intro {
+  margin-bottom: 14px;
+}
+
+.extra-subtitle {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.extra-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 18px;
+  font-size: 15px;
+  line-height: 1.4;
+  text-align: center;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.extra-list li+li {
+  margin-top: 8px;
+}
+
+.extra-title,
+.extra-subtitle,
+.extra-duration,
+.extra-intro {
+  text-align: center;
+}
+
+.extra-list li {
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+.extra-duration {
+  margin-top: auto;
+  font-weight: 500;
+}
+
+.extra-final {
+  margin-top: 30px;
+  font-size: 16px;
+  text-align: center;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Керування слайдером (як у тарифів) */
+
+.extra-controls {
+  margin-top: 18px;
+  display: none;
+  /* на компі не показуємо */
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.extra-prev,
+.extra-next {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  background-color: #c7d5b4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.extra-prev:hover,
+.extra-next:hover {
+  background-color: #aebd96;
+}
+
+.extra-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.extra-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.extra-dots .dot.active {
+  background-color: #5c946e;
 }
 
 /* ========== FAQ ========== */
@@ -868,6 +1019,25 @@ h2 {
     object-fit: contain !important;
     display: block;
   }
+
+  .extra-wrapper {
+    grid-template-columns: 1fr;
+    position: relative;
+  }
+
+  .extra-card {
+    display: none;
+    max-width: 100%;
+  }
+
+  .extra-card.active {
+    display: flex;
+  }
+
+  .extra-controls {
+    display: flex;
+    /* вмикаємо керування як у тарифів */
+  }
 }
 
 @media (max-width: 600px) {
@@ -1009,5 +1179,13 @@ h2 {
 
   .review-slide {
     height: 600px;
+  }
+
+  .extra-title {
+    font-size: 18px;
+  }
+
+  .extra-section {
+    padding: 50px 0;
   }
 }
