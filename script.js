@@ -154,3 +154,42 @@ document.addEventListener('DOMContentLoaded', () => {
   goTo(0);
   startAuto();
 });
+
+// ---------- Слайдер додаткових послуг (як тарифи) ----------
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.extra-card');
+  const prevBtn = document.querySelector('.extra-prev');
+  const nextBtn = document.querySelector('.extra-next');
+  const dots = document.querySelectorAll('.extra-dots .dot');
+
+  if (!cards.length || !prevBtn || !nextBtn) return;
+
+  let current = 0;
+
+  function showExtra(index) {
+    current = (index + cards.length) % cards.length;
+
+    cards.forEach((card, i) => {
+      card.classList.toggle('active', i === current);
+    });
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === current);
+    });
+  }
+
+  prevBtn.addEventListener('click', () => {
+    showExtra(current - 1);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    showExtra(current + 1);
+  });
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const index = Number(dot.dataset.index);
+      showExtra(index);
+    });
+  });
+});
