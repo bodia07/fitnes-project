@@ -567,13 +567,14 @@ h2 {
   margin: 0 0 18px;
   font-size: 15px;
   line-height: 1.4;
-  text-align: center;
+  text-align: left;
   margin-left: 0;
   padding-left: 0;
 }
 
 .extra-list li+li {
   margin-top: 8px;
+  list-style-type:circle;
 }
 
 .extra-title,
